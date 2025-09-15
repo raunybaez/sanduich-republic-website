@@ -1,0 +1,45 @@
+{
+  "categories": [
+    {
+      "name": "Sandüich",
+      "items": [
+        {
+          "name": "The OG",
+          "price": 12,
+          "desc": "Ham, cheese, mayo, ketchup, green tomato, onion"
+        },
+        {
+          "name": "The Chick Magnet",
+          "price": 14,
+          "desc": "Shredded chicken, mayo, ketchup, green tomato, onion"
+        },
+        {
+          "name": "The Boss Hog",
+          "price": 14,
+          "desc": "Shredded pork, garlic cilantro aioli, green tomato, onion"
+        }
+      ]
+    },
+    {
+      "name": "Smoothies",
+      "items": [
+        {
+          "name": "Mango",
+          "price": 8,
+          "desc": "Ripe mango blended smooth"
+        },
+        {
+          "name": "Strawberry",
+          "price": 8,
+          "desc": "Fresh strawberries, creamy finish"
+        },
+        {
+          "name": "Tropical",
+          "price": 9,
+          "desc": "Pineapple, passion fruit, coconut"
+        }
+      ]
+    }
+  ]
+}
+
