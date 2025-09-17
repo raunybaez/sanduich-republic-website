@@ -21,9 +21,17 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-amber-400 mb-4">
+            {/* Logo */}
+              <div className="mb-6">
+                <img
+                  src="/noBgBlack.png"
+                  alt="Sandüich Republic"
+                  className="h-16 w-auto filter invert"
+                />
+              </div>
+            {/* <h3 className="text-2xl font-bold text-amber-400 mb-4">
               Sandüich Republic
-            </h3>
+            </h3> */}
             <p className="text-gray-300 mb-6 max-w-md">
               Latin-inspired gourmet sandwiches made fresh daily. 
               Experience authentic flavors in every bite.
