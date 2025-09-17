@@ -92,7 +92,7 @@ const Contact = () => {
                     Hours
                   </h3>
                   <div className="text-gray-600 space-y-1">
-                    <p>Monday - Sunday: 10:00 AM - 9:00 PM</p>
+                    <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
                     <p className="text-sm text-gray-500">
                       Hours may vary on holidays
                     </p>
@@ -251,9 +251,9 @@ const Contact = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-600"
+              className="flex-1 px-4 py-3 rounded-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-600 border-1"
             />
-            <Button className="bg-white text-amber-600 hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg">
+            <Button className="bg-white text-amber-600 hover:bg-gray-100 font-semibold px-6 py-7 rounded-lg">
               Subscribe
             </Button>
           </div>

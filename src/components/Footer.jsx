@@ -47,7 +47,7 @@ const Footer = () => {
               <div>
                 <p className="text-gray-300">
                   <strong>Hours:</strong><br />
-                  Monday - Sunday: 10:00 AM - 9:00 PM
+                  Monday - Saturday: 9:00 AM - 7:00 PM
                 </p>
               </div>
             </div>
@@ -187,7 +187,7 @@ const Footer = () => {
               "longitude": "-71.1167"
             },
             "openingHours": [
-              "Mo-Su 10:00-21:00"
+              "Mo-Sa 9:00-7:00"
             ],
             "servesCuisine": "Latin American",
             "priceRange": "$",

@@ -5,18 +5,64 @@
       "items": [
         {
           "name": "The OG",
-          "price": 12,
-          "desc": "Ham, cheese, mayo, ketchup, green tomato, onion"
-        },
-        {
-          "name": "The Chick Magnet",
           "price": 14,
-          "desc": "Shredded chicken, mayo, ketchup, green tomato, onion"
+          "desc": "Grilled ham, cheese, mayo, ketchup, green tomatoes, and onion.",
+          "image": "/og-icon.avif"
         },
         {
           "name": "The Boss Hog",
+          "price": 16,
+          "desc": "Shredded pork, cheese mayo, garlic cilantro aioli, green tomatoes, and pickled mojo onions.",
+          "image": "/boss-hog-icon.avif"
+        },
+        {
+          "name": "The Chick Magnet",
+          "price": 16,
+          "desc": "Shredded chicken, cheese, mayo, ketchup, green tomatoes, and onion (BBQ, buffalo, chipotle).",
+          "image": "/chick-magnet-icon.avif"
+        },
+        {
+          "name": "The Triple Threat",
+          "price": 18,
+          "desc": "Shredded chicken and pork, grilled ham, cheese, green tomatoes, mayo, and pickled mojo onions.s",
+          "image": "/triple-threat-icon.avif"
+        },
+        {
+          "name": "The Spicy Gobble",
+          "price": 16,
+          "desc": "Smoked turkey, crispy bacon, pepper jack cheese, spicy chipotle mayo, arugula, tomato and pickled mojo onions on toasted sourdough",
+          "image": "/spicy-gobble-icon.avif"
+        },
+        {
+          "name": "The Habana Press",
+          "price": 18,
+          "desc": "Layers of roasted shredded pork, ham, Swiss cheese, pickles, and mojo onions, and mustard pressed between crispy baguette.",
+          "image": "/habana-icon.avif"
+        },
+        {
+          "name": "The Veggie Sensation",
           "price": 14,
-          "desc": "Shredded pork, garlic cilantro aioli, green tomato, onion"
+          "desc": "Grilled zucchini, red pepper, avocado, goat cheese, chipotle aioli on toasted sourdough",
+          "image": "/veggie-icon.avif"
+        },
+
+        {
+          "name": "The Chopped Cheese",
+          "price": 18,
+          "desc": "Classic NYC bodega sandwich with ground beef, melted cheese, peppers, onions, ketchup, mayo, lettuce and tomatoes on a toasted sub roll.",
+          "image": "/chopped-icon.avif"
+        },
+        {
+          "name": "The Breakfast Sammy",
+          "price": 14,
+          "desc": "Toasted sourdough stacked with crispy bacon, fluffy scrambled eggs, melted cheese and smoky chipotle mayo.",
+          "image": "/breakfast-sammy-icon.avif"
+        },
+         {
+          "name": "The Crazy Dog",
+          "price": 14,
+          "desc": "Grilled hotdog topped with seasoned ground beef, sautéed onions & peppers, melted cheese, shredded cabbage & carrots, plus a drizzle of mayo and ketchup sprinkled with sweet corn and chips.",
+          "image": "/crazy-dog-icon.avif"
         }
       ]
     },
@@ -24,22 +70,36 @@
       "name": "Smoothies",
       "items": [
         {
+          "name": "Mamey",
+          "price": 8,
+          "desc": "Rich, creamy blend of mamey fruit, evaporated milk, vanilla extract and ice delivering a naturally sweet and smooth flavor.",
+          "image": "/mamey-icon.avif"
+        },
+        {
           "name": "Mango",
           "price": 8,
-          "desc": "Ripe mango blended smooth"
+          "desc": "Creamy blend of fresh mangoes, evaporated milk, vanilla extract and ice creating a smooth and refreshing drink.",
+          "image": "/mango-icon.avif"
+        },
+        {
+          "name": "Passion Fruit",
+          "price": 8,
+          "desc": "Rich, creamy blend of passion fruit and evaporated milk, delivering a naturally sweet and smooth flavor.",
+          "image": "/fruit-icon.avif"
+        },
+        {
+          "name": "Banana",
+          "price": 8,
+          "desc": "Rich, creamy blend of bananas, evaporated milk, vanilla extract and ice delivering a naturally sweet and smooth flavor.",
+          "image": "/banana-icon.avif"
         },
         {
           "name": "Strawberry",
           "price": 8,
-          "desc": "Fresh strawberries, creamy finish"
-        },
-        {
-          "name": "Tropical",
-          "price": 9,
-          "desc": "Pineapple, passion fruit, coconut"
+          "desc": "Rich, creamy blend of fresh strawberries and evaporated milk and ice delivering a naturally sweet and smooth flavor.",
+          "image": "/strawberry-icon.webp"
         }
       ]
     }
   ]
 }
-

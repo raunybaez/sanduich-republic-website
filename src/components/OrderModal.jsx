@@ -7,21 +7,21 @@ const OrderModal = ({ isOpen, onClose }) => {
   const deliveryPartners = [
     {
       name: 'DoorDash',
-      url: 'https://www.doordash.com/store/sanduich-republic-placeholder',
+      url: 'https://order.online/business/sanduich-republic-14288787',
       logo: '🚗', // Placeholder - would be replaced with actual logo
       available: true,
     },
     {
       name: 'UberEats',
-      url: 'https://www.ubereats.com/store/sanduich-republic-placeholder',
+      url: 'https://www.order.store/store/sanduich-republic/_EmmdgNPXn23sQEPLZNScg',
       logo: '🍔', // Placeholder - would be replaced with actual logo
       available: true,
     },
     {
       name: 'Grubhub',
-      url: 'https://www.grubhub.com/restaurant/sanduich-republic-placeholder',
+      url: 'https://sanduichrepublic.dine.online/',
       logo: '🥪', // Placeholder - would be replaced with actual logo
-      available: false, // Example of unavailable service
+      available: true,
     },
   ];
 

@@ -34,40 +34,52 @@ sanduich-republic/
 ### 1. Replace Placeholder Content
 
 #### Google Analytics
+
 In `index.html`, replace `GA_MEASUREMENT_ID` with your actual Google Analytics ID:
+
 ```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_ACTUAL_GA_ID"></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=YOUR_ACTUAL_GA_ID"
+></script>
 <script>
-  gtag('config', 'YOUR_ACTUAL_GA_ID');
+  gtag("config", "YOUR_ACTUAL_GA_ID");
 </script>
 ```
 
 #### Delivery Partner URLs
+
 In `src/components/OrderModal.jsx` and `src/pages/Order.jsx`, replace placeholder URLs:
+
 ```javascript
 // Replace these URLs with your actual restaurant links:
-DoorDash: 'https://www.doordash.com/store/your-actual-restaurant-link'
-UberEats: 'https://www.ubereats.com/store/your-actual-restaurant-link'
-Grubhub: 'https://www.grubhub.com/restaurant/your-actual-restaurant-link'
+DoorDash: "https://order.online/business/sanduich-republic-14288787";
+UberEats: "https://www.order.store/store/sanduich-republic/_EmmdgNPXn23sQEPLZNScg";
+Grubhub: "https://sanduichrepublic.dine.online/";
 ```
 
 #### Contact Information
+
 Update contact details in:
+
 - `src/pages/Contact.jsx`
 - `src/components/Footer.jsx`
 
 Replace placeholder phone `(617) 555-SAND` and email `hello@sanduichrepublic.com` with actual contact information.
 
 #### Social Media Links
+
 In `src/components/Footer.jsx`, update social media URLs:
+
 ```javascript
-Instagram: 'https://instagram.com/your-actual-handle'
-Facebook: 'https://facebook.com/your-actual-page'
+Instagram: "https://instagram.com/your-actual-handle";
+Facebook: "https://facebook.com/your-actual-page";
 ```
 
 ### 2. Update Menu Items
 
 Edit `src/data/menu.json` to modify menu items, prices, and descriptions:
+
 ```json
 {
   "categories": [
@@ -88,15 +100,18 @@ Edit `src/data/menu.json` to modify menu items, prices, and descriptions:
 ### 3. Add Real Food Photography
 
 Replace emoji placeholders with actual food photos:
+
 1. Add images to `src/assets/` directory
 2. Import and use in components:
+
 ```javascript
-import sandwichImage from '../assets/sandwich.jpg';
+import sandwichImage from "../assets/sandwich.jpg";
 ```
 
 ## 🌐 Deployment Options
 
 ### Option 1: Static Hosting (Recommended)
+
 1. Build the project: `npm run build`
 2. Deploy the `dist/` folder to:
    - Netlify
@@ -105,16 +120,19 @@ import sandwichImage from '../assets/sandwich.jpg';
    - AWS S3 + CloudFront
 
 ### Option 2: Traditional Web Hosting
+
 1. Build the project: `npm run build`
 2. Upload `dist/` contents to your web server
 3. Configure server to serve `index.html` for all routes
 
 ### Option 3: Development Server
+
 For testing: `npm run dev --host`
 
 ## 🔍 SEO Optimization
 
 The website includes:
+
 - **Meta Tags**: Title, description, Open Graph, Twitter Cards
 - **Schema Markup**: LocalBusiness structured data
 - **Semantic HTML**: Proper heading hierarchy
@@ -124,6 +142,7 @@ The website includes:
 ## 📱 Mobile Optimization
 
 Features included:
+
 - **Responsive Design**: Works on all screen sizes
 - **Touch-Friendly**: 44px minimum touch targets
 - **Fast Loading**: Optimized assets and code splitting
@@ -132,6 +151,7 @@ Features included:
 ## 🎯 Analytics & Tracking
 
 Implemented tracking for:
+
 - **Page Views**: All page navigation
 - **Delivery Partner Clicks**: DoorDash, UberEats, Grubhub
 - **Menu Item Interactions**: Add to Order clicks
@@ -141,6 +161,7 @@ Implemented tracking for:
 ## 🔒 Security & Performance
 
 Built-in features:
+
 - **HTTPS Ready**: Secure by default
 - **Performance Optimized**: Lazy loading, code splitting
 - **Accessibility**: WCAG 2.1 AA compliant
@@ -149,16 +170,20 @@ Built-in features:
 ## 🛠 Maintenance
 
 ### Adding New Menu Items
+
 1. Edit `src/data/menu.json`
 2. Rebuild and redeploy
 
 ### Updating Content
+
 - Text changes: Edit component files
 - Images: Replace files in `src/assets/`
 - Styling: Modify `src/App.css`
 
 ### Analytics Monitoring
+
 Monitor these key metrics:
+
 - Order button click-through rates
 - Delivery partner preferences
 - Most popular menu items
@@ -167,6 +192,7 @@ Monitor these key metrics:
 ## 📞 Support
 
 For technical support or customizations:
+
 - Check React documentation for component updates
 - Use browser developer tools for debugging
 - Test on multiple devices before deployment
@@ -187,6 +213,7 @@ For technical support or customizations:
 ## 🎉 Launch Ready!
 
 Your Sandüich Republic website is production-ready with:
+
 - ✅ Modern, mobile-first design
 - ✅ DoorDash, UberEats, Grubhub integration
 - ✅ SEO optimization
@@ -195,4 +222,3 @@ Your Sandüich Republic website is production-ready with:
 - ✅ Performance optimization
 
 Simply replace the placeholder content and deploy to go live!
-

@@ -26,7 +26,7 @@ const Order = () => {
       name: 'Grubhub',
       url: 'https://www.grubhub.com/restaurant/sanduich-republic-placeholder',
       logo: '🥪',
-      available: false,
+      available: true,
       estimatedTime: 'N/A',
       deliveryFee: 'N/A',
       rating: 4.6,

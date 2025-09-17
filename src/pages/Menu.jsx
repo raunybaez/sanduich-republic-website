@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Star, Clock, Leaf } from 'lucide-react';
-import OrderModal from '../components/OrderModal';
-import menuData from '../data/menu.json';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Star, Clock, Leaf } from "lucide-react";
+import OrderModal from "../components/OrderModal";
+import menuData from "../data/menu.json";
 
 const Menu = () => {
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
@@ -10,10 +10,10 @@ const Menu = () => {
   const handleAddToOrder = (itemName, category) => {
     // Track click for analytics
     if (window.gtag) {
-      window.gtag('event', 'click', {
-        event_category: 'menu_item',
+      window.gtag("event", "click", {
+        event_category: "menu_item",
         event_label: `${category} - ${itemName}`,
-        event_action: 'add_to_order'
+        event_action: "add_to_order",
       });
     }
     setIsOrderModalOpen(true);
@@ -22,10 +22,10 @@ const Menu = () => {
   const handleOrderNowClick = () => {
     // Track click for analytics
     if (window.gtag) {
-      window.gtag('event', 'click', {
-        event_category: 'cta_button',
-        event_label: 'menu_page_order_now',
-        event_action: 'order_now'
+      window.gtag("event", "click", {
+        event_category: "cta_button",
+        event_label: "menu_page_order_now",
+        event_action: "order_now",
       });
     }
     setIsOrderModalOpen(true);
@@ -40,8 +40,9 @@ const Menu = () => {
             Our Menu
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Discover our selection of Latin-inspired gourmet sandwiches and refreshing smoothies, 
-            all made fresh daily with the finest ingredients.
+            Discover our selection of Latin-inspired gourmet sandwiches and
+            refreshing smoothies, all made fresh daily with the finest
+            ingredients.
           </p>
           <Button
             onClick={handleOrderNowClick}
@@ -68,22 +69,24 @@ const Menu = () => {
               {/* Menu Items Grid */}
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.items.map((item, itemIndex) => (
-                  <div 
-                    key={itemIndex} 
-                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                  <div
+                    key={itemIndex}
+                    className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full"
                   >
-                    {/* Item Image Placeholder */}
-                    <div className="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
-                      <div className="text-6xl">
-                        {category.name === 'Sandüich' ? '🥪' : '🥤'}
-                      </div>
+                    {/* Item Image */}
+                    <div className="h-48 w-full overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="h-full w-full object-cover"
+                      />
                     </div>
 
                     {/* Item Content */}
-                    <div className="p-6">
+                    <div className="p-6 flex flex-col flex-1">
                       {/* Item Header */}
                       <div className="flex justify-between items-start mb-3">
-                        <h3 className="text-2xl font-bold text-green-600">
+                        <h3 className="text-2xl font-bold text-amber-600">
                           {item.name}
                         </h3>
                         <span className="text-3xl font-bold text-gray-900">
@@ -92,7 +95,7 @@ const Menu = () => {
                       </div>
 
                       {/* Item Description */}
-                      <p className="text-gray-600 mb-4 leading-relaxed">
+                      <p className="text-gray-600 text-md mb-4 leading-relaxed flex-1">
                         {item.desc}
                       </p>
 
@@ -108,15 +111,21 @@ const Menu = () => {
                         </div>
                         <div className="flex items-center space-x-1">
                           {[...Array(5)].map((_, i) => (
-                            <Star key={i} size={14} className="text-yellow-400 fill-current" />
+                            <Star
+                              key={i}
+                              size={14}
+                              className="text-yellow-400 fill-current"
+                            />
                           ))}
                         </div>
                       </div>
 
                       {/* Order Button */}
                       <Button
-                        onClick={() => handleAddToOrder(item.name, category.name)}
-                        className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-colors"
+                        onClick={() =>
+                          handleAddToOrder(item.name, category.name)
+                        }
+                        className="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 rounded-lg transition-colors mt-auto"
                       >
                         Add to Order
                       </Button>
@@ -135,15 +144,15 @@ const Menu = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
             Frequently Asked Questions
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-6 bg-gray-50 rounded-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 What are your hours?
               </h3>
               <p className="text-gray-600">
-                We're open Monday through Sunday, 10:00 AM to 9:00 PM. 
-                Hours may vary on holidays.
+                We're open Monday through Saturday, 9:00 AM to 7:00 PM. Hours may
+                vary on holidays.
               </p>
             </div>
 
@@ -152,8 +161,9 @@ const Menu = () => {
                 Where can I find you?
               </h3>
               <p className="text-gray-600">
-                We're located inside Wonderful Mart at 2368 Massachusetts Avenue, 
-                Cambridge, MA 02140. Look for us near the food court area.
+                We're located inside Wonderful Mart at 2368 Massachusetts
+                Avenue, Cambridge, MA 02140. Look for us near the food court
+                area.
               </p>
             </div>
 
@@ -162,7 +172,7 @@ const Menu = () => {
                 Which delivery partners do you use?
               </h3>
               <p className="text-gray-600">
-                We partner with DoorDash, UberEats, and Grubhub for delivery. 
+                We partner with DoorDash, UberEats, and Grubhub for delivery.
                 Availability may vary by time and location.
               </p>
             </div>
@@ -172,8 +182,9 @@ const Menu = () => {
                 Do you accommodate food allergies?
               </h3>
               <p className="text-gray-600">
-                Please inform us of any allergies when ordering. We'll do our best 
-                to accommodate dietary restrictions and provide ingredient information.
+                Please inform us of any allergies when ordering. We'll do our
+                best to accommodate dietary restrictions and provide ingredient
+                information.
               </p>
             </div>
           </div>
@@ -181,30 +192,30 @@ const Menu = () => {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-green-700">
+      <section className="py-16 px-4 bg-gradient-to-r bg-amber-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Hungry? Let's Get You Fed!
           </h2>
           <p className="text-xl text-green-100 mb-8">
-            Order your favorite items now and experience the authentic flavors of Latin cuisine.
+            Order your favorite items now and experience the authentic flavors
+            of Latin cuisine.
           </p>
           <Button
             onClick={handleOrderNowClick}
-            className="bg-white text-green-600 hover:bg-gray-100 font-bold text-lg px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200"
+            className="bg-white text-black hover:bg-gray-100 font-bold text-lg px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200"
           >
             Order Now
           </Button>
         </div>
       </section>
 
-      <OrderModal 
-        isOpen={isOrderModalOpen} 
-        onClose={() => setIsOrderModalOpen(false)} 
+      <OrderModal
+        isOpen={isOrderModalOpen}
+        onClose={() => setIsOrderModalOpen(false)}
       />
     </div>
   );
 };
 
 export default Menu;
-
