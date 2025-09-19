@@ -100,18 +100,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <Car className="text-blue-600 mt-1" size={24} />
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Parking
-                  </h3>
-                  <p className="text-gray-600">
-                    Free parking available in the Wonderful Mart parking lot. 
-                    Additional street parking may be available on Massachusetts Avenue.
-                  </p>
-                </div>
-              </div>
             </div>
 
             {/* Google Maps Embed */}
@@ -225,11 +213,11 @@ const Contact = () => {
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <Phone className="text-amber-600" size={20} />
-                    <span className="text-gray-600">(617) 555-SAND</span>
+                    <span className="text-gray-600">(617)279-7252</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="text-amber-600" size={20} />
-                    <span className="text-gray-600">hello@sanduichrepublic.com</span>
+                    <span className="text-gray-600">sanduichrepublic@gmail.com</span>
                   </div>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Clock, Instagram, Facebook, Mail } from 'lucide-react';
+import { MapPin, Clock, Phone, Instagram, Facebook, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Footer = () => {
@@ -45,6 +45,16 @@ const Footer = () => {
                   <strong>Inside Wonderful Mart</strong><br />
                   2368 Massachusetts Avenue<br />
                   Cambridge, MA 02140
+                </p>
+              </div>
+            </div>
+
+            {/* Phone */}
+            <div className="flex items-start space-x-3 mb-4">
+              <Phone className="text-amber-400 mt-1" size={20} />
+              <div>
+                <p className="text-gray-300">
+                  <strong>Tel:</strong> (617)279-7252
                 </p>
               </div>
             </div>
@@ -122,7 +132,7 @@ const Footer = () => {
               <p className="text-gray-300 mb-3">Follow Us:</p>
               <div className="flex space-x-4">
                 <a
-                  href="https://instagram.com/sanduichrepublic"
+                  href="https://www.instagram.com/sanduichrepublic/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-amber-400 transition-colors"
@@ -130,7 +140,7 @@ const Footer = () => {
                   <Instagram size={24} />
                 </a>
                 <a
-                  href="https://facebook.com/sanduichrepublic"
+                  href="https://www.instagram.com/sanduichrepublic/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-amber-400 transition-colors"
@@ -138,7 +148,7 @@ const Footer = () => {
                   <Facebook size={24} />
                 </a>
                 <a
-                  href="mailto:hello@sanduichrepublic.com"
+                  href="mailto:sanduichrepublic@gmail.com"
                   className="text-gray-300 hover:text-amber-400 transition-colors"
                 >
                   <Mail size={24} />
@@ -152,7 +162,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Sandüich Republic. All rights reserved.
+              © 2025 Sandüich Republic. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">
@@ -179,8 +189,8 @@ const Footer = () => {
             "name": "Sandüich Republic",
             "description": "Latin-inspired gourmet sandwich shop offering fresh, authentic flavors made daily.",
             "url": "https://sanduichrepublic.com",
-            "telephone": "(617) 555-SAND",
-            "email": "hello@sanduichrepublic.com",
+            "telephone": "(617)279-7252",
+            "email": "sanduichrepublic@gmail.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "2368 Massachusetts Avenue (Inside Wonderful Mart)",

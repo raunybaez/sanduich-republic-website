@@ -8,17 +8,36 @@ import menuData from "../data/menu.json";
 const Home = () => {
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
 
-  // Get featured items (first item from each category)
-  const featuredItems = menuData.categories.map((category) => ({
-    ...category.items[0],
-    category: category.name,
-  }));
+  // Get specific featured items
+  const featuredItems = [
+    {
+      name: "The OG",
+      price: 14,
+      desc: "Grilled ham, cheese, mayo, ketchup, green tomatoes, and onion.",
+      image: "/og-icon.avif",
+      category: "Sandüiches"
+    },
+    {
+      name: "The Chick Magnet", 
+      price: 16,
+      desc: "Shredded chicken, cheese, mayo, ketchup, green tomatoes, and onion (BBQ, buffalo, chipotle).",
+      image: "/chick-magnet-icon.avif",
+      category: "Sandüiches"
+    },
+    {
+      name: "Mamey",
+      price: 8,
+      desc: "Rich, creamy blend of mamey fruit, evaporated milk, vanilla extract and ice delivering a naturally sweet and smooth flavor.",
+      image: "/mamey-icon.avif",
+      category: "Smoothies"
+    }
+  ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
 
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-40 px-4 overflow-hidden">
         <video
           autoPlay
           loop
@@ -26,7 +45,7 @@ const Home = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover filter blur-[3px]"
         >
-          <source src="/bg-video-3.mov" type="video/mp4" />
+          <source src="/bg-video-4.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -53,32 +72,8 @@ const Home = () => {
                 Order Now
               </Button>
 
-              <div className="mt-8 p-4 bg-white rounded-lg shadow-md inline-block text-gray-800">
-                <div className="flex items-center space-x-2 text-amber-600">
-                  <MapPin size={20} />
-                  <span className="font-semibold">
-                    Find us inside Wonderful Mart
-                  </span>
-                </div>
-                <p className="text-gray-600 text-sm mt-1">
-                  2368 Massachusetts Avenue, Cambridge, MA 02140
-                </p>
-              </div>
             </div>
 
-            <div className="relative z-10">
-              <div className="bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl p-8 shadow-2xl">
-                <div className="bg-white rounded-xl p-6 text-center">
-                  <div className="text-6xl mb-4">🥪</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    Mouthwatering Sandwiches
-                  </h3>
-                  <p className="text-gray-600">
-                    Fresh ingredients, bold flavors, authentic recipes
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -92,7 +87,9 @@ const Home = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6">
-              <div className="text-4xl mb-4">🌶️</div>
+              <div className="mb-4">
+                <img src="/imag2.png" alt="Authentic Latin Flavors" className="w-16 h-16 mx-auto rounded-full object-cover" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Authentic Latin Flavors
               </h3>
@@ -103,7 +100,9 @@ const Home = () => {
             </div>
 
             <div className="p-6">
-              <div className="text-4xl mb-4">🥬</div>
+              <div className="mb-4">
+                <img src="/imag1.png" alt="Fresh Daily Ingredients" className="w-16 h-16 mx-auto rounded-full object-cover" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Fresh Daily Ingredients
               </h3>
@@ -114,7 +113,9 @@ const Home = () => {
             </div>
 
             <div className="p-6">
-              <div className="text-4xl mb-4">⚡</div>
+              <div className="mb-4">
+                <img src="/imag3.png" alt="Quick & Convenient" className="w-16 h-16 mx-auto rounded-full object-cover" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Quick & Convenient
               </h3>
@@ -143,19 +144,34 @@ const Home = () => {
             {featuredItems.map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
+                {/* Product Image */}
+                <div className="aspect-w-16 aspect-h-9 bg-gray-100">
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+                
+                {/* Product Info */}
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-3">
-                    <h3 className="text-xl font-bold text-amber-600 ">
+                    <h3 className="text-2xl font-bold text-amber-600">
                       {item.name}
                     </h3>
-                    <span className="text-2xl font-bold text-gray-900">
+                    <span className="text-3xl font-bold text-gray-900">
                       ${item.price}
                     </span>
                   </div>
-                  <p className="text-gray-600 mb-4">{item.desc}</p>
-                  <div className="flex items-center justify-between">
+                  
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                  
+                  {/* Category and Rating */}
+                  <div className="flex items-center justify-between mb-6">
                     <span className="text-sm font-medium text-orange-600 bg-orange-100 px-3 py-1 rounded-full">
                       {item.category}
                     </span>
@@ -169,6 +185,14 @@ const Home = () => {
                       ))}
                     </div>
                   </div>
+                  
+                  {/* Add to Order Button */}
+                  <Button 
+                    onClick={() => setIsOrderModalOpen(true)}
+                    className="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 rounded-lg transition-colors"
+                  >
+                    Add to Order
+                  </Button>
                 </div>
               </div>
             ))}

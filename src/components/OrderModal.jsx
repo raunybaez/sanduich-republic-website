@@ -8,19 +8,19 @@ const OrderModal = ({ isOpen, onClose }) => {
     {
       name: 'DoorDash',
       url: 'https://order.online/business/sanduich-republic-14288787',
-      logo: '🚗', // Placeholder - would be replaced with actual logo
+      logo: '/DoorDash2.png',
       available: true,
     },
     {
       name: 'UberEats',
       url: 'https://www.order.store/store/sanduich-republic/_EmmdgNPXn23sQEPLZNScg',
-      logo: '🍔', // Placeholder - would be replaced with actual logo
+      logo: '/UberEats.png',
       available: true,
     },
     {
       name: 'Grubhub',
-      url: 'https://sanduichrepublic.dine.online/',
-      logo: '🥪', // Placeholder - would be replaced with actual logo
+      url: 'https://sanduichrepublic.dine.online',
+      logo: '/Grubhub2.png',
       available: true,
     },
   ];
@@ -79,7 +79,9 @@ const OrderModal = ({ isOpen, onClose }) => {
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <span className="text-2xl">{partner.logo}</span>
+                  <div className="w-16 h-16">
+                    <img src={partner.logo} alt={partner.name} className="w-full h-full object-contain" />
+                  </div>
                   <span className="font-semibold text-lg">{partner.name}</span>
                 </div>
                 {!partner.available && (

@@ -162,7 +162,7 @@ const Menu = () => {
               </h3>
               <p className="text-gray-600">
                 We're located inside Wonderful Mart at 2368 Massachusetts
-                Avenue, Cambridge, MA 02140. Look for us near the food court
+                Avenue, Cambridge, MA 02140. Look for us near the deli
                 area.
               </p>
             </div>

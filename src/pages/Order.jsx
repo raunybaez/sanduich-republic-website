@@ -4,8 +4,8 @@ const Order = () => {
   const deliveryPartners = [
     {
       name: 'DoorDash',
-      url: 'https://www.doordash.com/store/sanduich-republic-placeholder',
-      logo: '🚗',
+      url: 'https://order.online/business/sanduich-republic-14288787',
+      logo: '/DoorDash2.png',
       available: true,
       estimatedTime: '25-35 min',
       deliveryFee: '$2.99',
@@ -14,8 +14,8 @@ const Order = () => {
     },
     {
       name: 'UberEats',
-      url: 'https://www.ubereats.com/store/sanduich-republic-placeholder',
-      logo: '🍔',
+      url: 'https://www.order.store/store/sanduich-republic/_EmmdgNPXn23sQEPLZNScg',
+      logo: '/UberEats.png',
       available: true,
       estimatedTime: '20-30 min',
       deliveryFee: '$1.99',
@@ -24,8 +24,8 @@ const Order = () => {
     },
     {
       name: 'Grubhub',
-      url: 'https://www.grubhub.com/restaurant/sanduich-republic-placeholder',
-      logo: '🥪',
+      url: 'https://sanduichrepublic.dine.online',
+      logo: '/Grubhub2.png',
       available: true,
       estimatedTime: 'N/A',
       deliveryFee: 'N/A',
@@ -80,7 +80,9 @@ const Order = () => {
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                     {/* Partner Info */}
                     <div className="flex items-center space-x-6 mb-6 md:mb-0">
-                      <div className="text-6xl">{partner.logo}</div>
+                      <div className="w-16 h-16">
+                        <img src={partner.logo} alt={partner.name} className="w-full h-full object-contain" />
+                      </div>
                       <div>
                         <h3 className="text-3xl font-bold text-gray-900 mb-2">
                           {partner.name}
@@ -88,30 +90,6 @@ const Order = () => {
                         <p className="text-gray-600 mb-3">
                           {partner.description}
                         </p>
-                        <div className="flex items-center space-x-4">
-                          <div className="flex items-center space-x-1">
-                            <Star className="text-yellow-400 fill-current" size={16} />
-                            <span className="text-sm font-medium text-gray-700">
-                              {partner.rating}
-                            </span>
-                          </div>
-                          {partner.available && (
-                            <>
-                              <div className="flex items-center space-x-1">
-                                <Clock className="text-green-600" size={16} />
-                                <span className="text-sm text-gray-600">
-                                  {partner.estimatedTime}
-                                </span>
-                              </div>
-                              <div className="flex items-center space-x-1">
-                                <Truck className="text-blue-600" size={16} />
-                                <span className="text-sm text-gray-600">
-                                  {partner.deliveryFee} delivery
-                                </span>
-                              </div>
-                            </>
-                          )}
-                        </div>
                       </div>
                     </div>
 
@@ -200,11 +178,11 @@ const Order = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center space-x-2">
                 <span className="text-2xl">📞</span>
-                <span className="font-semibold text-gray-900">(617) 555-SAND</span>
+                <span className="font-semibold text-gray-900">(617)279-7252</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span className="text-2xl">📍</span>
-                <span className="text-gray-600">2368 Massachusetts Ave, Cambridge</span>
+                <span className="text-gray-600">2368 Massachusetts Ave, Cambridge, MA 02140</span>
               </div>
             </div>
           </div>
