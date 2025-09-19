@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { MapPin, Clock, Phone, Mail, Car, Navigation } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const Contact = () => {
     message: ''
   });
   const [formStatus, setFormStatus] = useState(''); // 'success', 'error', or ''
+  const [errorMessage, setErrorMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
@@ -33,17 +35,38 @@ const Contact = () => {
     const error = validateForm();
     if (error) {
       setFormStatus('error');
+      setErrorMessage(error);
       return;
     }
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // EmailJS configuration
+      const serviceId = 'service_x0hicea';
+      const templateId = 'template_ejjatym';
+      const publicKey = '0hbDyxmBE_sLF5rpY';
+      
+      // Template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_name: 'Sandüich Republic',
+      };
+      
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
       setFormStatus('success');
-      setIsSubmitting(false);
       setFormData({ name: '', email: '', message: '' });
-    }, 1000);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setFormStatus('error');
+      setErrorMessage('Failed to send message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -191,7 +214,7 @@ const Contact = () => {
                 {formStatus === 'error' && (
                   <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
                     <p className="text-red-800 font-medium">
-                      Please fill in all required fields correctly.
+                      {errorMessage || 'Please fill in all required fields correctly.'}
                     </p>
                   </div>
                 )}
