@@ -1,17 +1,63 @@
 import { useState } from 'react';
 import { MapPin, Clock, Phone, Instagram, Facebook, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import emailjs from '@emailjs/browser';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [newsletterStatus, setNewsletterStatus] = useState(''); // 'success', 'error', or ''
+  const [isNewsletterSubmitting, setIsNewsletterSubmitting] = useState(false);
 
-  const handleNewsletterSubmit = (e) => {
+  const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
-    if (email) {
+    
+    // Basic email validation
+    if (!email.trim()) {
+      setNewsletterStatus('error');
+      return;
+    }
+    
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setNewsletterStatus('error');
+      return;
+    }
+
+    setIsNewsletterSubmitting(true);
+    
+    try {
+      // EmailJS configuration for newsletter
+      const serviceId = 'service_x0hicea';
+      const templateId = 'template_ejjatym';
+      const publicKey = '0hbDyxmBE_sLF5rpY';
+      
+      // Template parameters for newsletter
+      const templateParams = {
+        from_name: 'Newsletter Subscriber',
+        from_email: email,
+        message: `New newsletter subscription request from: ${email}`,
+        to_name: 'Sandüich Republic',
+        subject: 'Newsletter Subscription'
+      };
+      
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      setNewsletterStatus('success');
       setSubscribed(true);
       setEmail('');
-      setTimeout(() => setSubscribed(false), 3000);
+      
+      // Auto-hide success message after 3 seconds
+      setTimeout(() => {
+        setNewsletterStatus('');
+        setSubscribed(false);
+      }, 3000);
+      
+    } catch (error) {
+      console.error('Footer Newsletter EmailJS Error:', error);
+      setNewsletterStatus('error');
+    } finally {
+      setIsNewsletterSubmitting(false);
     }
   };
 
@@ -115,14 +161,23 @@ const Footer = () => {
                 />
                 <Button
                   type="submit"
-                  className="bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                  disabled={isNewsletterSubmitting}
+                  className="bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Subscribe
+                  {isNewsletterSubmitting ? 'Subscribing...' : 'Subscribe'}
                 </Button>
               </div>
-              {subscribed && (
+              
+              {/* Status Messages */}
+              {(subscribed || newsletterStatus === 'success') && (
                 <p className="text-green-400 text-sm mt-2">
-                  Thanks for subscribing!
+                  🎉 Thanks for subscribing! You'll receive updates about special offers.
+                </p>
+              )}
+              
+              {newsletterStatus === 'error' && (
+                <p className="text-red-400 text-sm mt-2">
+                  ❌ Please enter a valid email address.
                 </p>
               )}
             </form>

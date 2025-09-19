@@ -12,6 +12,11 @@ const Contact = () => {
   const [formStatus, setFormStatus] = useState(''); // 'success', 'error', or ''
   const [errorMessage, setErrorMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Newsletter state
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState(''); // 'success', 'error', or ''
+  const [isNewsletterSubmitting, setIsNewsletterSubmitting] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -66,6 +71,56 @@ const Contact = () => {
       setErrorMessage('Failed to send message. Please try again or contact us directly.');
     } finally {
       setIsSubmitting(false);
+    }
+  };
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Basic email validation
+    if (!newsletterEmail.trim()) {
+      setNewsletterStatus('error');
+      return;
+    }
+    
+    if (!/\S+@\S+\.\S+/.test(newsletterEmail)) {
+      setNewsletterStatus('error');
+      return;
+    }
+
+    setIsNewsletterSubmitting(true);
+    
+    try {
+      // EmailJS configuration for newsletter
+      const serviceId = 'service_x0hicea';
+      const templateId = 'template_ejjatym'; // You might want a separate template for newsletter
+      const publicKey = '0hbDyxmBE_sLF5rpY';
+      
+      // Template parameters for newsletter
+      const templateParams = {
+        from_name: 'Newsletter Subscriber',
+        from_email: newsletterEmail,
+        message: `New newsletter subscription request from: ${newsletterEmail}`,
+        to_name: 'Sandüich Republic',
+        subject: 'Newsletter Subscription'
+      };
+      
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      setNewsletterStatus('success');
+      setNewsletterEmail('');
+      
+      // Auto-hide success message after 3 seconds
+      setTimeout(() => {
+        setNewsletterStatus('');
+      }, 3000);
+      
+    } catch (error) {
+      console.error('Newsletter EmailJS Error:', error);
+      setNewsletterStatus('error');
+    } finally {
+      setIsNewsletterSubmitting(false);
     }
   };
 
@@ -258,16 +313,44 @@ const Contact = () => {
           <p className="text-xl text-amber-100 mb-8">
             Subscribe to our newsletter for special offers and new menu items.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-amber-600 border-1"
-            />
-            <Button className="bg-white text-amber-600 hover:bg-gray-100 font-semibold px-6 py-7 rounded-lg">
-              Subscribe
-            </Button>
-          </div>
+          <form onSubmit={handleNewsletterSubmit} className="max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
+              <div className="flex-1 w-full sm:w-auto">
+                <input
+                  type="email"
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-3 rounded-xl border-2 border-white bg-transparent text-white placeholder-amber-200 focus:ring-2 focus:ring-white focus:border-white focus:outline-none h-[50px]"
+                  required
+                />
+              </div>
+              <Button 
+                type="submit"
+                disabled={isNewsletterSubmitting}
+                className="bg-white text-amber-600 hover:bg-gray-100 font-semibold px-6 py-3 rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap h-[50px] flex items-center"
+              >
+                {isNewsletterSubmitting ? 'Subscribing...' : 'Subscribe'}
+              </Button>
+            </div>
+            
+            {/* Newsletter Status Messages */}
+            {newsletterStatus === 'success' && (
+              <div className="mt-4 p-3 bg-green-100 border border-green-300 rounded-lg">
+                <p className="text-green-800 font-medium text-sm">
+                  🎉 Thank you for subscribing! You'll receive updates about special offers and new menu items.
+                </p>
+              </div>
+            )}
+            
+            {newsletterStatus === 'error' && (
+              <div className="mt-4 p-3 bg-red-100 border border-red-300 rounded-lg">
+                <p className="text-red-800 font-medium text-sm">
+                  ❌ Please enter a valid email address.
+                </p>
+              </div>
+            )}
+          </form>
         </div>
       </section>
     </div>
