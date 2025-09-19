@@ -8,7 +8,7 @@ import menuData from "../data/menu.json";
 const Home = () => {
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
 
-  // Get specific featured items
+  // Get specific featured items.
   const featuredItems = [
     {
       name: "The OG",
@@ -236,3 +236,4 @@ const Home = () => {
 };
 
 export default Home;
+
