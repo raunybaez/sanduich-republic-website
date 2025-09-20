@@ -4,5 +4,10 @@
   status = 200
 
 [build]
-  command = "corepack enable && pnpm install --legacy-peer-deps && pnpm run build"
-  publish = ".next" # change to "build" or "dist" depending on your framework
+  command = "pnpm install --legacy-peer-deps && pnpm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+  
