@@ -1,0 +1,6 @@
+[build]
+  command = "pnpm install --legacy-peer-deps && pnpm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
