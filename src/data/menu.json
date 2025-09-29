@@ -12,19 +12,19 @@
         {
           "name": "The Boss Hog",
           "price": 16,
-          "desc": "Grilled ham and melted cheese layered with mayo, ketchup, green tomatoes, and grilled onions.",
+          "desc": "Slow-cooked shredded pork with melted cheese, topped with garlic cilantro aioli, fresh green tomatoes, and tangy pickled mojo onions.",
           "image": "/boss-hog-icon.avif"
         },
         {
           "name": "The Chick Magnet",
           "price": 16,
-          "desc": "Grilled ham and melted cheese layered with mayo, ketchup, green tomatoes, and grilled onions.",
+          "desc": "Tender shredded chicken with melted cheese, creamy mayo, a touch of ketchup, fresh green tomatoes, and pickled onions.",
           "image": "/chick-magnet-icon.avif"
         },
         {
           "name": "The Triple Threat",
           "price": 18,
-          "desc": "Grilled ham and melted cheese layered with mayo, ketchup, green tomatoes, and grilled onions.",
+          "desc": "The ultimate combo of shredded chicken, pork, and grilled ham with melted cheese, green tomatoes, mayo, and pickled mojo onions.",
           "image": "/triple-threat-icon.avif"
         },
         {
@@ -67,13 +67,13 @@
         {
           "name": "The Oink Tacos",
           "price": 14,
-          "desc": "Grilled hotdog topped with seasoned ground beef, sautéed onions & peppers, melted cheese, shredded cabbage & carrots, plus a drizzle of mayo and ketchup, sprinkled with sweet corn and chips.",
+          "desc": "Shredded pork with homemade taco seasoning, mashed avocado, sliced cabbage, lime sour cream drizzle, spicy mayo and pickled onions on two flour tortillas.",
           "image": "/oink-tacos-icon.avif"
         },
         {
           "name": "The Sunrise Croissant",
           "price": 8,
-          "desc": "Grilled hotdog topped with seasoned ground beef, sautéed onions & peppers, melted cheese, shredded cabbage & carrots, plus a drizzle of mayo and ketchup, sprinkled with sweet corn and chips.",
+          "desc": "Flaky, buttery croissant stacked with crispy bacon, fried egg, and melted cheese — a perfect start to the day.",
           "image": "/sunrise-croissant-icon.avif"
         },
         {
