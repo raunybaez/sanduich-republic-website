@@ -6,43 +6,43 @@
         {
           "name": "The OG",
           "price": 14,
-          "desc": "Grilled ham, cheese, mayo, ketchup, green tomatoes, and onion.",
+          "desc": "Grilled ham and melted cheese layered with mayo, ketchup, green tomatoes, and grilled onions.",
           "image": "/og-icon.avif"
         },
         {
           "name": "The Boss Hog",
           "price": 16,
-          "desc": "Shredded pork, cheese mayo, garlic cilantro aioli, green tomatoes, and pickled mojo onions.",
+          "desc": "Grilled ham and melted cheese layered with mayo, ketchup, green tomatoes, and grilled onions.",
           "image": "/boss-hog-icon.avif"
         },
         {
           "name": "The Chick Magnet",
           "price": 16,
-          "desc": "Shredded chicken, cheese, mayo, ketchup, green tomatoes, and onion (BBQ, buffalo, chipotle).",
+          "desc": "Grilled ham and melted cheese layered with mayo, ketchup, green tomatoes, and grilled onions.",
           "image": "/chick-magnet-icon.avif"
         },
         {
           "name": "The Triple Threat",
           "price": 18,
-          "desc": "Shredded chicken and pork, grilled ham, cheese, green tomatoes, mayo, and pickled mojo onions.s",
+          "desc": "Grilled ham and melted cheese layered with mayo, ketchup, green tomatoes, and grilled onions.",
           "image": "/triple-threat-icon.avif"
         },
         {
           "name": "The Spicy Gobble",
           "price": 16,
-          "desc": "Smoked turkey, crispy bacon, pepper jack cheese, spicy chipotle mayo, arugula, tomato and pickled mojo onions on toasted sourdough",
+          "desc": "Smoked turkey, crispy bacon, pepper jack cheese, spicy chipotle mayo, arugula, tomato and pickled mojo onions on toasted sourdough.",
           "image": "/spicy-gobble-icon.avif"
         },
         {
           "name": "The Habana Press",
           "price": 18,
-          "desc": "Layers of roasted shredded pork, ham, Swiss cheese, pickles, and mojo onions, and mustard pressed between crispy baguette.",
+          "desc": "A classic Cubano with layers of shredded pork, ham, Swiss cheese, pickles, mustard, and mojo onions pressed to perfection on crispy baguette.",
           "image": "/habana-icon.avif"
         },
         {
           "name": "The Veggie Sensation",
           "price": 14,
-          "desc": "Grilled zucchini, red pepper, avocado, goat cheese, chipotle aioli on toasted sourdough",
+          "desc": "A veggie favorite: grilled zucchini and red pepper with creamy avocado, tangy goat cheese, and chipotle aioli on toasted sourdough.",
           "image": "/veggie-icon.avif"
         },
 
@@ -61,8 +61,26 @@
          {
           "name": "The Crazy Dog",
           "price": 14,
-          "desc": "Grilled hotdog topped with seasoned ground beef, sautéed onions & peppers, melted cheese, shredded cabbage & carrots, plus a drizzle of mayo and ketchup sprinkled with sweet corn and chips.",
+          "desc": "Grilled hotdog topped with seasoned ground beef, sautéed onions & peppers, melted cheese, shredded cabbage & carrots, plus a drizzle of mayo and ketchup, sprinkled with sweet corn and chips.",
           "image": "/crazy-dog-icon.avif"
+        },
+        {
+          "name": "The Oink Tacos",
+          "price": 14,
+          "desc": "Grilled hotdog topped with seasoned ground beef, sautéed onions & peppers, melted cheese, shredded cabbage & carrots, plus a drizzle of mayo and ketchup, sprinkled with sweet corn and chips.",
+          "image": "/oink-tacos-icon.avif"
+        },
+        {
+          "name": "The Sunrise Croissant",
+          "price": 8,
+          "desc": "Grilled hotdog topped with seasoned ground beef, sautéed onions & peppers, melted cheese, shredded cabbage & carrots, plus a drizzle of mayo and ketchup, sprinkled with sweet corn and chips.",
+          "image": "/sunrise-croissant-icon.avif"
+        },
+        {
+          "name": "The Republic Club",
+          "price": 18,
+          "desc": "Juicy shredded chicken with ham and melted cheese, creamy mayo, a hint of ketchup, fresh green tomatoes, and grilled onions, all stacked between toasted bread and served with crispy French fries.",
+          "image": "/club-sanduich-icon.avif"
         }
       ]
     },
