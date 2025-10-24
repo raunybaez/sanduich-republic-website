@@ -220,10 +220,10 @@ const Footer = () => {
               © 2025 Sandüich Republic. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">
+              <a href="/privacy" className="text-gray-400 hover:text-amber-400 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">
+              <a href="/terms" className="text-gray-400 hover:text-amber-400 transition-colors">
                 Terms of Service
               </a>
               <a href="#" className="text-gray-400 hover:text-amber-400 transition-colors">
