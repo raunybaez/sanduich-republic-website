@@ -41,7 +41,7 @@ const TermsOfService = () => {
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p className="text-gray-700 mb-2">
-                  <strong>Business Hours:</strong> Monday - Saturday: 9:00 AM - 7:00 PM<br />
+                  <strong>Business Hours:</strong> Monday - Saturday: 10:00 AM - 5:00 PM<br />
                   <strong>Phone:</strong> (617) 279-7252<br />
                   <strong>Email:</strong> sanduichrepublic@gmail.com
                 </p>

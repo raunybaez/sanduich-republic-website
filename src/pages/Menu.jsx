@@ -151,7 +151,7 @@ const Menu = () => {
                 What are your hours?
               </h3>
               <p className="text-gray-600">
-                We're open Monday through Saturday, 9:00 AM to 7:00 PM. Hours may
+                We're open Monday through Saturday, 10:00 AM to 5:00 PM. Hours may
                 vary on holidays.
               </p>
             </div>
