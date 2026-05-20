@@ -4,88 +4,88 @@
       "name": "Sandüiches",
       "items": [
         {
-          "name": "The OG",
-          "price": 14,
+          "name": "OG",
+          "price": 13.99,
           "desc": "Grilled ham and melted cheese layered with mayo, ketchup, green tomatoes, and grilled onions.",
           "image": "/og-icon.avif"
         },
         {
-          "name": "The Boss Hog",
-          "price": 16,
+          "name": "Boss Hog",
+          "price": 15.99,
           "desc": "Slow-cooked shredded pork with melted cheese, topped with garlic cilantro aioli, fresh green tomatoes, and tangy pickled mojo onions.",
           "image": "/boss-hog-icon.avif"
         },
         {
-          "name": "The Chick Magnet",
-          "price": 16,
+          "name": "Chick Magnet",
+          "price": 15.99,
           "desc": "Tender shredded chicken with melted cheese, creamy mayo, a touch of ketchup, fresh green tomatoes, and pickled onions.",
           "image": "/chick-magnet-icon.avif"
         },
         {
-          "name": "The Triple Threat",
-          "price": 18,
+          "name": "Triple Threat",
+          "price": 17.99,
           "desc": "The ultimate combo of shredded chicken, pork, and grilled ham with melted cheese, green tomatoes, mayo, and pickled mojo onions.",
           "image": "/triple-threat-icon.avif"
         },
         {
-          "name": "The Spicy Gobble",
-          "price": 16,
-          "desc": "Smoked turkey, crispy bacon, pepper jack cheese, spicy chipotle mayo, arugula, tomato and pickled mojo onions on toasted sourdough.",
+          "name": "Spicy Gobble",
+          "price": 15.99,
+          "desc": "Smoked turkey, crispy bacon, pepper jack cheese, spicy chipotle mayo, lettuce, tomato and pickled mojo onions on toasted sourdough.",
           "image": "/spicy-gobble-icon.avif"
         },
         {
-          "name": "The Habana Press",
-          "price": 18,
+          "name": "Habana Press",
+          "price": 17.99,
           "desc": "A classic Cubano with layers of shredded pork, ham, Swiss cheese, pickles, mustard, and mojo onions pressed to perfection on crispy baguette.",
           "image": "/habana-icon.avif"
         },
         {
-          "name": "The Veggie Sensation",
-          "price": 14,
+          "name": "Veggie Sensation",
+          "price": 13.99,
           "desc": "A veggie favorite: grilled zucchini and red pepper with creamy avocado, tangy goat cheese, and chipotle aioli on toasted sourdough.",
           "image": "/veggie-icon.avif"
         },
 
         {
-          "name": "The Chopped Cheese",
-          "price": 18,
+          "name": "Chopped Cheese",
+          "price": 17.99,
           "desc": "Classic NYC bodega sandwich with ground beef, melted cheese, peppers, onions, ketchup, mayo, lettuce and tomatoes on a toasted sub roll.",
           "image": "/chopped-icon.avif"
         },
         {
-          "name": "The Breakfast Sammy",
-          "price": 14,
+          "name": "Breakfast Sammy",
+          "price": 11.99,
           "desc": "Toasted sourdough stacked with crispy bacon, fluffy scrambled eggs, melted cheese and smoky chipotle mayo.",
           "image": "/breakfast-sammy-icon.avif"
         },
-         {
-          "name": "The Crazy Dog",
-          "price": 14,
-          "desc": "Grilled hotdog topped with seasoned ground beef, sautéed onions & peppers, melted cheese, shredded cabbage & carrots, plus a drizzle of mayo and ketchup, sprinkled with sweet corn and chips.",
-          "image": "/crazy-dog-icon.avif"
+        {
+          "name": "Morning Bagel",
+          "price": 8.99,
+          "desc": "Plain or everything bagel stacked with grilled ham, fried egg, and melted cheese — a perfect start to the day.",
+          "image": "/morning-bagel-icon.avif"
         },
         {
-          "name": "The Oink Tacos",
-          "price": 14,
-          "desc": "Shredded pork with homemade taco seasoning, mashed avocado, sliced cabbage, lime sour cream drizzle, spicy mayo and pickled onions on two flour tortillas.",
-          "image": "/oink-tacos-icon.avif"
-        },
-        {
-          "name": "The Sunrise Croissant",
-          "price": 8,
+          "name": "Sunrise Croissant",
+          "price": 7.99,
           "desc": "Flaky, buttery croissant stacked with crispy bacon, fried egg, and melted cheese — a perfect start to the day.",
           "image": "/sunrise-croissant-icon.avif"
         },
         {
-          "name": "The Republic Club",
-          "price": 18,
-          "desc": "Juicy shredded chicken with ham and melted cheese, creamy mayo, a hint of ketchup, fresh green tomatoes, and grilled onions, all stacked between toasted bread and served with crispy French fries.",
-          "image": "/club-sanduich-icon.avif"
+          "name": "Crunchy Quesadilla",
+          "price": 17.99,
+          "desc": "Flour tortilla grilled with your choice of beef, shredded chicken or pork, pico de gallo, sour cream and cheese.",
+          "image": "/crunchy-quesadilla-icon.avif"
         }
         ,
         {
-          "name": "The Super Burrito",
-          "price": 18,
+          "name": "Breakfast Burrito",
+          "price": 17.99,
+          "desc": "Flour tortilla filled with scrambled eggs, crispy bacon, melted cheese, and french fries with your choice of beef franks or ham — a hearty start to your day.",
+          "image": "/breakfast-burrito-icon.avif"
+        },
+        {
+          "name": "Super Burrito",
+          "price": 17.99,
           "desc": "Generously sized flour tortilla wrapped and filled with your choice of savory, seasoned meat or a vegetarian option with fresh pico de gallo, black beans, cilantro lime rice, guacamole, sour cream, cheese with choice of meat: shredded chicken, pork carnitas or ground beef.",
           "image": "/super-burrito-icon.avif"
         }

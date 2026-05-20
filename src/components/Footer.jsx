@@ -217,7 +217,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2025 Sandüich Republic. All rights reserved.
+              © 2026 Sandüich Republic. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="/privacy" className="text-gray-400 hover:text-amber-400 transition-colors">
